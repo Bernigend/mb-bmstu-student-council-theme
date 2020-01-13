@@ -1,0 +1,163 @@
+///
+/// Контейнер фильтра
+///
+.filter-container {
+  padding: 20px;
+
+  background-color: #fff;
+
+  border: 1px solid #cecece;
+  border-top: 2px solid green;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .15);
+}
+
+///
+/// Заголовок фильтра
+///
+.filter__title {
+  margin-bottom: 30px;
+  font-size: pxToRem(24);
+  font-weight: bold;
+}
+
+///
+/// Фильтр по датам
+///
+.filter__date {
+  margin: 10px 0;
+
+  div {
+    display: inline-block;
+    float: right;
+
+    i {
+      padding: 0 10px;
+      color: #989898;
+      cursor: pointer;
+      transition: .3s ease-out;
+
+      &:hover {
+        color: #000000;
+      }
+    }
+  }
+}
+
+///
+/// Фильтр по месяцам
+///
+.filter__months {
+  margin: 10px 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      display: block;
+      position: relative;
+      padding: 6px 20px 6px 40px;
+      cursor: pointer;
+
+      &.chosen {
+        &:before {
+          color: #000000 !important;
+        }
+      }
+
+      &:before {
+        display: block;
+        //content: "\f560";
+        content: "\f00c";
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 8px;
+        padding-left: 11px;
+
+        color: #fff;
+        font-family: icomoon, serif;
+        font-weight: 600;
+        transition: .2s ease-out;
+      }
+
+      &:hover {
+        &:before {
+          color: #cecece;
+        }
+      }
+    }
+  }
+}
+
+///
+/// Блок вывода предупреждений/ошибок
+///
+.filter__warning {
+  display: none;
+  margin: 10px 0;
+  padding: 10px;
+
+  border: 2px solid #ec7373;
+  box-shadow: 0 0 9px 0 #ec7373;
+
+  font-weight: bold;
+  text-align: center;
+
+  &.opened {
+    display: block;
+  }
+}
+
+///
+/// Кнопки фильтра
+///
+.filter__button {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 10px 30px;
+  margin-top: 10px;
+
+  color: inherit;
+  background-color: #fff;
+  border: 2px solid #cecece;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition: .55s ease-out;
+}
+
+/// Вариация "применить" кнопки фильтра
+.filter__button--choose {
+  @extend .filter__button;
+
+  &:hover, &:focus {
+    border-color: #008000;
+    outline: none;
+  }
+}
+
+/// Вариация "отменить" кнопки фильтра
+.filter__button--cancel {
+  @extend .filter__button;
+
+  &:hover, &:focus {
+    border-color: #ec7373;
+    outline: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .aside-right {
+    .filter-container {
+      padding: 0;
+      border: none;
+      box-shadow: none;
+    }
+  }
+}

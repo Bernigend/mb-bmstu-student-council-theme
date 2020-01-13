@@ -1,0 +1,35 @@
+{
+  "name": "student-council-theme",
+  "version": "1.0.0",
+  "description": "Wordpress theme for student's council site",
+  "main": "index.php",
+  "scripts": {
+    "build:prod": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "watch": "webpack --watch --mode development"
+  },
+  "author": "Bernigend",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.0",
+    "autoprefixer": "^9.7.3",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.4.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "browserslist": [
+    "defaults",
+    "last 5 version"
+  ],
+  "dependencies": {
+    "@sentry/browser": "^5.11.0",
+    "jquery": "^3.4.1"
+  }
+}

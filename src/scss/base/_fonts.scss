@@ -1,0 +1,46 @@
+///
+/// Подключение Roboto
+///
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+
+///
+/// Подключение icomoon
+///
+@font-face {
+  font-family: 'icomoon';
+  src:  url($icomoon-path + 'icomoon.eot?6u38zd');
+  src:  url($icomoon-path + 'icomoon.eot?6u38zd#iefix') format('embedded-opentype'),
+  url($icomoon-path + 'icomoon.ttf?6u38zd') format('truetype'),
+  url($icomoon-path + 'icomoon.woff?6u38zd') format('woff'),
+  url($icomoon-path + 'icomoon.svg?6u38zd#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@import "../../webfonts/icomoon/icomoon";
+
+///
+/// Подключение Proxima Nova Light
+///
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: url($proxima-nova-path + 'ProximaNova-Light.eot');
+  src: url($proxima-nova-path + 'ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+  url($proxima-nova-path + 'ProximaNova-Light.woff') format('woff'),
+  url($proxima-nova-path + 'ProximaNova-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+///
+/// Подключение Proxima Nova Bold
+///
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url($proxima-nova-path + 'ProximaNova-Bold.eot');
+  src: url($proxima-nova-path + 'ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+  url($proxima-nova-path + 'ProximaNova-Bold.woff') format('woff'),
+  url($proxima-nova-path + 'ProximaNova-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

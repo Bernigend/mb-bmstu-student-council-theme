@@ -1,0 +1,110 @@
+///
+/// Большой и красивый заголовок раздела (по типу шапки)
+/// P.S. не смог придумать нормальное название :D
+///
+.big-title {
+  position: relative;
+  width: 100%;
+  padding: 60px 0;
+  margin: 30px 0;
+
+  background-position: bottom;
+  background-size: 100% 400px;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right bottom,#253CCD,#008B6C);
+
+  text-align: center;
+
+  .title {
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    margin: 0;
+
+    border: 1px solid #ffffff;
+    border-right: none;
+    border-left: none;
+
+    color: #fff;
+    font-size: pxToRem(35);
+
+    z-index: 2;
+  }
+
+  @include abs-bg("images/bg/bg-snow.gif");
+}
+
+///
+/// Темный задний фон страницы при необходимости
+///
+.overlay {
+  display: none;
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: #000000;
+  opacity: 0.5;
+  z-index: 980;
+
+  &.open {
+    display: block;
+  }
+
+  &.aside-opened {
+    display: block;
+    z-index: 1000;
+  }
+}
+
+///
+/// Уведомление о пустой категории
+///
+.empty-category {
+  padding: 10px 0 10px 20px;
+
+  font-family: Proxima Nova Bold, sans-serif;
+  font-size: pxToRem(21);
+  font-weight: bold;
+
+  background-color: #ffffff;
+  border-left: 3px solid #ff544a;
+}
+
+///
+/// @deprecated см. _mixins
+///
+.clear-b {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+html {
+  &.with-admin-bar {
+    .main-navigation {
+      top: 32px;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .big-title .title {
+    font-size: pxToRem(32);
+  }
+}
+
+@media (max-width: 680px) {
+  .big-title .title {
+    font-size: pxToRem(24);
+  }
+}
+
+@media (max-width: 600px) {
+  #wpadminbar {
+    position: fixed!important;
+  }
+}

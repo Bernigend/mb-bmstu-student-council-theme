@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $font-main-size * 1px;
+}
+
+body {
+  font-family: Proxima Nova Light, sans-serif;
+  background-image: url('images/bg/bg-body-snow.png');
+  background-repeat: repeat;
+}
+
+///
+/// Основная обёртка контента, ограничивает ширину сайта в 1260px
+///
+.wrapper {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include clear-b;
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 14px;
+  }
+}

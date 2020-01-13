@@ -1,0 +1,70 @@
+///
+/// Контейнер коллег Студенческого совета
+///
+.our-friends-container {
+  display: flex;
+  margin: -15px 0;
+
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  .wp-block-image {
+    @extend .friend;
+  }
+}
+
+///
+/// Класс друга :D
+///
+.friend {
+
+  width: 32.3334%;
+  max-width: 300px;
+  margin: 15px;
+
+  text-align: center;
+  text-decoration: none;
+
+  img {
+    max-width: 100%;
+    max-height: 200px;
+    box-shadow: 0 0 3px 1px rgba(24, 86, 172, 0.4);
+    transition: box-shadow .2s ease-out;
+  }
+
+  figcaption, p {
+    margin: 10px 0;
+    padding: 0 10px;
+    color: #000000;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &:hover {
+    img {
+      box-shadow: 0 0 5px 1px #1856ac;
+    }
+  }
+}
+
+
+@media (max-width: 1080px) {
+  .friend {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 910px) {
+  .friend {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 780px) {
+  .friend {
+    width: 100%;
+  }
+}

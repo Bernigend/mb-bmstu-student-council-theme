@@ -1,0 +1,105 @@
+///
+/// Главная шапка сайта
+///
+.main-header {
+  position: relative;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(to right bottom,#253CCD,#008B6C);
+
+  @include abs-bg("images/bg/bg-snow.gif");
+
+  &:after {
+    z-index: unset;
+  }
+}
+
+///
+/// Информация о сайте в шапке
+///
+.main-head__site-info {
+  position: relative;
+  padding: 6.25rem 0;
+  text-align: center;
+  color: #ffffff;
+  z-index: 1;
+}
+
+///
+/// Логотип Сутденческого совета в шапке
+///
+.main-head__site-logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 150px;
+  height: 156px;
+
+  margin-right: 50px;
+
+  background-image: url('images/logo/logo_big.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+///
+/// Название сайта в шапке
+///
+.main-head__site-name {
+  display: inline-block;
+  vertical-align: middle;
+
+  padding: 0 20px;
+  border-color: #787878;
+  border-right: 1px solid;
+  border-left: 1px solid;
+
+  font-size: pxToRem(42);
+
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+  p:first-child {
+    font-size: 1.2857em;
+    padding-bottom: 5px;
+  }
+}
+
+@media (max-width: 860px) {
+  .main-head__site-logo {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .main-head__site-name {
+    margin-top: 30px;
+    font-size: pxToRem(32);
+  }
+}
+
+@media (max-width: 540px) {
+  .main-head__site-logo {
+    width: 120px;
+    height: 126px;
+  }
+
+  .main-head__site-name {
+    font-size: pxToRem(24);
+  }
+}
+
+@media (max-width: 420px) {
+  .main-head__site-name {
+    font-size: pxToRem(20);
+  }
+}
+
+@media (max-width: 350px) {
+  .main-head__site-name {
+    font-size: pxToRem(17);
+  }
+}

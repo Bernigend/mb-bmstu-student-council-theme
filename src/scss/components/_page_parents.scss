@@ -1,0 +1,36 @@
+///
+/// Панель навигации родительских сущностей
+///
+.page-parents {
+  position: relative;
+  padding: 20px;
+
+  color: #8a8a8a;
+  font-size: pxToRem(14);
+
+  background-color: #ececec;
+  z-index: 20;
+
+  a {
+    display: inline-block;
+    padding-bottom: 1px;
+    margin-bottom: 3px;
+
+    border-bottom: 1px solid #8a8a8a;
+
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .page-parents {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

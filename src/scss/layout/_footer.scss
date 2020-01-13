@@ -1,0 +1,78 @@
+///
+/// Контейнер футера сайта
+///
+.footer-container {
+  position: relative;
+  width: 100%;
+
+  background-color: #343a40;
+  z-index: 20;
+}
+
+.footer__page-up {
+  @extend .page-parents;
+  text-align: center;
+  cursor: pointer;
+
+  i {
+    padding: 0 10px;
+  }
+
+  &:hover {
+    background-color: #cccccc;
+  }
+}
+
+///
+/// Copyright в футере
+///
+.footer__copyright {
+  position: relative;
+  padding: 20px;
+
+  background-color: #212529;
+
+  color: #868e96;
+  font-size: pxToRem(12.8);
+  z-index: 2;
+}
+
+///
+/// Соц. сети в футере
+///
+.footer__social-networks {
+  float: right;
+
+  a {
+    display: inline-block;
+    margin-left: 10px;
+
+    font-size: pxToRem(16);
+    color: inherit;
+
+    text-decoration: none;
+
+    &:hover {
+      color: #dcdcdc;
+    }
+  }
+
+  .footer__vk {
+    font-size: 1.1rem;
+  }
+}
+
+///
+/// Псевдо-футер
+///
+.pre-footer {
+  margin-top: 30px;
+}
+
+body {
+  &.single {
+    .pre-footer {
+      margin-top: 0;
+    }
+  }
+}

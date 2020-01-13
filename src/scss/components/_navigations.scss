@@ -1,0 +1,162 @@
+///
+/// Главное горизонтальное фиксированное навигационное меню
+///
+.main-navigation {
+  width: 100%;
+
+  background-position-y: 0;
+  background-size: 100% 400px;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right bottom,#253CCD,#008B6C);
+
+  position: fixed;
+  top: 0;
+  z-index: 999;
+
+  opacity: 1;
+
+  nav {
+    float: right;
+    @include clear-b;
+  }
+}
+
+///
+/// Логотип сайта в панели навигации
+///
+.main-nav__site-logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 43px;
+  height: 46px;
+
+  margin-right: 20px;
+
+  background-image: url("images/logo/logo_big.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+///
+/// Название сайта в панели навигации
+///
+.main-nav__site-name {
+  display: inline-block;
+  vertical-align: middle;
+  color: #ffffff;
+
+  padding: 0 10px;
+  border-color: #787878;
+  border-right: 1px solid;
+  border-left: 1px solid;
+
+  font-size: pxToRem(11);
+
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+  p:first-child {
+    font-size: pxToRem(15);
+    padding-bottom: 5px;
+  }
+}
+
+///
+/// Информация о сайте в панели навигации
+///
+.main-nav__site-info {
+  visibility: hidden;
+  display: inline-block;
+  padding-top: 5px;
+
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+
+  &.visible {
+    visibility: visible;
+  }
+}
+
+///
+/// Обёртка меню в панели навигации
+///
+.main-nav__ul {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+
+  .menu-item, .page_item {
+    @include main_nav__menu-item;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+///
+/// Открывашка/закрывашка меню
+///
+.main-nav__toggle-menu {
+  @include main_nav__menu-item;
+
+  a {
+    font-weight: bold;
+    padding-right: 55px;
+
+    &:after {
+      display: inline-block;
+      position: absolute;
+      content: "\f0c9";
+
+      right: 30px;
+      top: 21px;
+
+      font-family: icomoon, serif;
+    }
+  }
+
+  &.menu-opened {
+    a {
+      &:after {
+        content: "\f00d";
+      }
+    }
+  }
+}
+
+body {
+  &.admin-bar {
+    .main-navigation {
+      top: 32px;
+
+      @media (max-width: 782px) {
+        & {
+          top: 46px;
+        }
+      }
+    }
+  }
+}
+
+//@media (max-width: 600px) {
+//  &.admin-bar {
+//    .main-navigation {
+//      top: 46px!important;
+//    }
+//  }
+//}
+
+@media (max-width: 540px) {
+  .main-navigation .wrapper {
+    padding-right: 0;
+  }
+
+  .main-nav__site-name {
+    display: none;
+  }
+}

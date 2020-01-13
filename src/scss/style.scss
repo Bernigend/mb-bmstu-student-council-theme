@@ -1,0 +1,32 @@
+/**
+ * Theme name: Студенческий совет (theme)
+ * Description: Тема оформления сайта студенческого совета
+ * Author: Bernigend
+ * Author URL: https://vk.com/bernigend, https://bernigend.ru
+ * Version: 1.0.0
+ */
+
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+
+@import "base/fonts";
+@import "base/normalize";
+@import "base/helpers";
+
+@import "components/filters";
+@import "components/asides";
+@import "components/menu";
+@import "components/friends";
+@import "components/navigations";
+@import "components/page_parents";
+@import "components/pagination";
+
+@import "layout/body";
+@import "layout/header";
+@import "layout/page_content";
+@import "layout/events";
+@import "layout/news";
+@import "layout/albums";
+@import "layout/footer";
+@import "layout/posts";

@@ -1,0 +1,46 @@
+///
+/// Контейнер пагинации
+///
+.nav-links {
+  margin: 30px 0;
+
+  .page-numbers {
+    display: inline-block;
+    padding: 10px;
+    min-width: pxToRem(30);
+
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #cecece;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.15);
+
+    text-align: center;
+    line-height: pxToRem(30);
+
+    box-sizing: content-box;
+    text-decoration: none;
+
+    i {
+      color: #8c8c8c;
+    }
+
+    &:hover {
+      @extend .current;
+    }
+  }
+
+  .prev, .next {
+    i {
+      vertical-align: middle;
+    }
+  }
+
+  .current {
+    color: #ffffff;
+    background-color: #5a5a5a;
+
+    i {
+      color: #ffffff;
+    }
+  }
+}

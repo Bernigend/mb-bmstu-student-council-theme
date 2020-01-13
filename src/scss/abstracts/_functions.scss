@@ -1,0 +1,4 @@
+/// Переводит пиксели в rem
+@function pxToRem ($px) {
+  @return (($px / $font-main-size) * 1rem);
+}

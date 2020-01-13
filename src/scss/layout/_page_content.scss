@@ -1,0 +1,51 @@
+/**
+ * Контейнер страницы
+ */
+.page-content-container {
+  @extend .wrapper;
+  //margin: 30px auto;
+  margin: 0 auto;
+
+  h2 {
+    margin: 30px 0;
+  }
+
+  h3 {
+    margin: 20px 0;
+  }
+
+  h4 {
+    margin: 10px 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .with-see-all {
+    a {
+      display: inline-block;
+
+      text-decoration: none;
+      border-bottom: 1px solid;
+      color: #787878;
+
+      font-size: 0.9375rem;
+      font-weight: lighter;
+
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    &.single {
+      .page-content-container {
+        padding: 0;
+      }
+    }
+  }
+}

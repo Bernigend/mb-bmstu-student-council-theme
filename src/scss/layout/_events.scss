@@ -1,0 +1,232 @@
+///
+/// Контейнер ближайших мероприятий
+///
+.upcoming-events-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: -15px 0;
+
+  a {
+    display: inline-block;
+    margin: 15px;
+    text-decoration: none;
+  }
+}
+
+///
+/// Контейнер категории мероприятий
+///
+.events-category-container {
+  width: 70%;
+}
+
+///
+/// Класс мероприятия
+///
+.event {
+  margin: 30px auto;
+  color: #008000;
+  border-color: #008000;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+///
+/// Вся информация о мероприятии
+///
+.event__info {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  padding: 20px 20px 20px 301px;
+
+  color: #000000;
+  background-color: #fff;
+
+  z-index: 5;
+
+  border-top: 2px solid;
+  border-color: inherit;
+  border-right: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+
+  p {
+    margin: 1rem 0;
+  }
+}
+
+///
+/// Заголовок мероприятия
+///
+.event__title {
+  display: block;
+  margin: 0 0 20px 0;
+
+  color: inherit;
+  font-family: Proxima Nova Bold,sans-serif;
+  font-size: pxToRem(21);
+  font-weight: bolder;
+
+  text-decoration: none;
+}
+
+///
+/// Дополнительная информация о мероприятии
+///
+.event__more-info {
+  margin-bottom: 20px;
+  text-align: center;
+
+  div {
+    display: inline-block;
+    margin: 0 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  i {
+    color: #989898;
+  }
+}
+
+///
+/// Описание мероприятия
+///
+.event__description {
+  text-align: justify;
+  line-height: 22px;
+  font-size: pxToRem(17);
+}
+
+///
+/// Изображение мероприятия (постер)
+///
+.event__thumbnail {
+  display: block;
+  position: relative;
+  width: 280px;
+  height: 400px;
+
+  float: left;
+
+  color: inherit;
+  box-shadow: 0 0 5px 0;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+
+  cursor: pointer;
+  z-index: 10;
+}
+
+///
+/// Абсолютно позиционированный низ мероприятия (для кнопки)
+///
+.event__bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: inherit;
+
+  color: inherit;
+  background-color: #fff;
+}
+
+///
+/// Кнопка мероприятия "подробнее"
+///
+.event__read-more {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 10px 30px;
+
+  color: #008000;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: #fff;
+
+  transition: .55s ease-out;
+
+  span {
+    color: #000000;
+  }
+
+  &:hover {
+    &:after {
+      box-shadow: 0 0 1px 2px;
+    }
+  }
+
+  &:after {
+    display: block;
+    position: absolute;
+    content: "";
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    color: inherit;
+    box-shadow: 0 0 1px 1px;
+    opacity: 0.7;
+
+    transition: .3s ease-out;
+  }
+}
+
+///
+/// Постер мероприятия
+///
+.event-poster {
+  height: 400px;
+  box-shadow: 0 0 4px 1px;
+  color: rgb(16, 132, 251);
+  transition: box-shadow .2s ease-out;
+
+  &:hover {
+    box-shadow: 0 0 6px 2px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .events-category-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 970px) {
+  .event-poster {
+    height: 300px;
+  }
+}
+
+@media (max-width: 830px) {
+  .event__thumbnail {
+    display: none;
+  }
+
+  .event__info {
+    padding-left: 20px;
+    height: auto;
+  }
+
+  .event__bottom {
+    position: unset;
+    padding: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .event-poster {
+    height: 250px;
+  }
+}
